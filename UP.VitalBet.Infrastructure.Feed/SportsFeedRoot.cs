@@ -9,7 +9,7 @@ using UP.VitalBet.Model;
 namespace UP.VitalBet.Infrastructure.Feed
 {
     [XmlRoot("XmlSports")]
-    public class SportsFeedRoot: IDataSurrogate<IEnumerable<Sport>>
+    public class SportsFeedRoot
     {
         [XmlElement("Sport")]
         public List<SportSurrogated> Sports { get; set; }
@@ -20,11 +20,6 @@ namespace UP.VitalBet.Infrastructure.Feed
         public SportsFeedRoot()
         {
             this.Sports = new List<SportSurrogated>();
-        }
-
-        public IEnumerable<Sport> GetDeserializedObject(int parentId = 0)
-        {
-            return Sports.Select(x => x.GetDeserializedObject());
         }
     }
 

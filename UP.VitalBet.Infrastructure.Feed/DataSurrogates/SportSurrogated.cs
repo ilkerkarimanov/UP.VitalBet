@@ -21,7 +21,7 @@ namespace UP.VitalBet.Infrastructure.Feed.DataSurrogates
             this.Events = new List<EventSurrogated>();
         }
 
-        public Sport GetDeserializedObject(int parentId = 0)
+        public Sport GetDeserializedObject(int parentRef = 0)
         {
             Sport obj = new Sport();
             obj.Id = Id;

@@ -23,12 +23,12 @@ namespace UP.VitalBet.Infrastructure.Feed.DataSurrogates
             this.Odds = new List<OddSurrogated>();
         }
 
-        public Bet GetDeserializedObject(int parentId = 0)
+        public Bet GetDeserializedObject(int parentRef = 0)
         {
             Bet obj = new Bet();
             obj.Id = Id;
             obj.Name = Name;
-            obj.MatchId = parentId;
+            obj.MatchId = parentRef;
             obj.IsLive = IsLive;
             obj.Odds = Odds.Select(x => x.GetDeserializedObject(Id)).ToList();
             return obj;

@@ -2,6 +2,6 @@
 {
     public interface IDataSurrogate<T>
     {
-         T GetDeserializedObject(int parentId = 0);
+         T GetDeserializedObject(int parentReference = 0);
     }
 }

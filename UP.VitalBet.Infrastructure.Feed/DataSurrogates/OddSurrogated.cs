@@ -16,12 +16,12 @@ namespace UP.VitalBet.Infrastructure.Feed.DataSurrogates
         [XmlAttribute("SpecialBetValue")]    
         public string SpecialBetValue { get; set; }
 
-        public Odd GetDeserializedObject(int parentId = 0)
+        public Odd GetDeserializedObject(int parentRef = 0)
         {
 
             Odd obj = new Odd();
             obj.Id = Id;
-            obj.BetId = parentId;
+            obj.BetId = parentRef;
             obj.Name = Name;
             obj.SpecialBetValue = SpecialBetValue ?? string.Empty;
             obj.Value = Value;

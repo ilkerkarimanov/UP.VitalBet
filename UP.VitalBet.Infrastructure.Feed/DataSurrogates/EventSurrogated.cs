@@ -27,11 +27,11 @@ namespace UP.VitalBet.Infrastructure.Feed.DataSurrogates
             this.Matches = new List<MatchSurrogated>();
         }
 
-        public Event GetDeserializedObject(int parentId = 0)
+        public Event GetDeserializedObject(int parentRef = 0)
         {
             Event obj = new Event();
             obj.Id = this.Id;
-            obj.SportId = parentId;
+            obj.SportId = parentRef;
             obj.Name = this.Name;
             obj.IsCategory = this.IsCategory;
             obj.Matches = Matches.Select(x => x.GetDeserializedObject(Id)).ToList();
