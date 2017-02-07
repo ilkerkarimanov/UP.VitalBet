@@ -8,13 +8,13 @@ namespace UP.VitalBet.Infrastructure.Feed
 {
     public class FeedSerializer : IFeedSerializer
     {
-        public SportsFeedRoot SerializeFeed(Stream content)
+        public SportsFeed SerializeFeed(Stream content)
         {
-            SportsFeedRoot result = new SportsFeedRoot();
+            SportsFeed result = new SportsFeed();
             using(var reader = new StreamReader(content))
             {
-                var serializer = new XmlSerializer(typeof(SportsFeedRoot));
-                var serializedObj = serializer.Deserialize(reader) as SportsFeedRoot;
+                var serializer = new XmlSerializer(typeof(SportsFeed));
+                var serializedObj = serializer.Deserialize(reader) as SportsFeed;
                 result = serializedObj;
             }
             return result;

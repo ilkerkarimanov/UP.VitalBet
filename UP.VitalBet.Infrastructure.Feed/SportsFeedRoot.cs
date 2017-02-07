@@ -9,7 +9,7 @@ using UP.VitalBet.Model;
 namespace UP.VitalBet.Infrastructure.Feed
 {
     [XmlRoot("XmlSports")]
-    public class SportsFeedRoot
+    public class SportsFeed
     {
         [XmlElement("Sport")]
         public List<SportSurrogated> Sports { get; set; }
@@ -17,7 +17,7 @@ namespace UP.VitalBet.Infrastructure.Feed
         [XmlAttribute("CreateDate")]
         public DateTime CreateDate { get; set; }
 
-        public SportsFeedRoot()
+        public SportsFeed()
         {
             this.Sports = new List<SportSurrogated>();
         }
