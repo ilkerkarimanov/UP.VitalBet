@@ -298,7 +298,7 @@
       <Project>{8cbcc14e-93f1-49c6-9665-4de198b81070}</Project>
       <Name>UP.VitalBet.App</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UP.VitalBet.Common.Cqs\UP.VitalBet.Core.Cqs.csproj">
+    <ProjectReference Include="..\UP.VitalBet.Core.Cqs\UP.VitalBet.Core.Cqs.csproj">
       <Project>{0e2a2f53-39af-46b3-8144-42b2787e9be2}</Project>
       <Name>UP.VitalBet.Core.Cqs</Name>
     </ProjectReference>

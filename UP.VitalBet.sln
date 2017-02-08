@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP.VitalBet.Common", "UP.Vi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP.VitalBet.App", "UP.VitalBet.App\UP.VitalBet.App.csproj", "{8CBCC14E-93F1-49C6-9665-4DE198B81070}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP.VitalBet.Core.Cqs", "UP.VitalBet.Common.Cqs\UP.VitalBet.Core.Cqs.csproj", "{0E2A2F53-39AF-46B3-8144-42B2787E9BE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP.VitalBet.Core.Cqs", "UP.VitalBet.Core.Cqs\UP.VitalBet.Core.Cqs.csproj", "{0E2A2F53-39AF-46B3-8144-42B2787E9BE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP.VitalBet.App.Cqs", "UP.VitalBet.App.Cqs\UP.VitalBet.App.Cqs.csproj", "{DE4C07D6-53BB-456F-AE11-FFA926B5ED69}"
 EndProject

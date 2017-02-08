@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UP.VitalBet.Common.Cqs\UP.VitalBet.Core.Cqs.csproj">
+    <ProjectReference Include="..\UP.VitalBet.Core.Cqs\UP.VitalBet.Core.Cqs.csproj">
       <Project>{0E2A2F53-39AF-46B3-8144-42B2787E9BE2}</Project>
       <Name>UP.VitalBet.Core.Cqs</Name>
     </ProjectReference>
