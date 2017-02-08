@@ -16,7 +16,7 @@ namespace UP.VitalBet.Infrastructure.Index
 
         public async Task<IEnumerable<Sport>> Crawl()
         {
-            var feedResult = await _feedClient.RetrieveSportFeed();
+            var feedResult = await _feedClient.RetrieveSportsFeed();
             return await Task.FromResult(feedResult.Sports);
         }
     }

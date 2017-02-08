@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace DDD.Common.Cqs.Query
+namespace UP.VitalBet.Common.Cqs.Query
 {
     public sealed class QueryProcessor : IQueryProcessor
     {

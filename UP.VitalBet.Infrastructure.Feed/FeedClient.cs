@@ -21,7 +21,7 @@ namespace UP.VitalBet.Infrastructure.Feed
             _feedSerializer = feedSerializer;
             _config = config;
         }
-        public async Task<FeedResult> RetrieveSportFeed()
+        public async Task<FeedResult> RetrieveSportsFeed()
         {
             var stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();

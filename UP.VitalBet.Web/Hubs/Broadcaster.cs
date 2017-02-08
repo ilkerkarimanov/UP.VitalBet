@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UP.VitalBet.App.Cqs.QueryResults.Matches;
 using UP.VitalBet.Common;
 using UP.VitalBet.App.Cqs.Queries.Matches;
-using DDD.Common.Cqs.Query;
+using UP.VitalBet.Common.Cqs.Query;
 
 namespace UP.VitalBet.Web.Hubs
 {

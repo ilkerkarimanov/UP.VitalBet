@@ -19,8 +19,6 @@ namespace UP.VitalBet.Web.DependencyResolution
 {
     using StructureMap.Graph;
     using System;
-    using DDD.Common.Cqs.Command;
-    using DDD.Common.Cqs.Query;
     using FluentScheduler;
     using UP.VitalBet.App;
     using UP.VitalBet.Core.Configuration;
@@ -39,6 +37,8 @@ namespace UP.VitalBet.Web.DependencyResolution
     using Microsoft.AspNet.SignalR.Hubs;
     using Microsoft.AspNet.SignalR.Infrastructure;
     using Common;
+    using Common.Cqs.Command;
+    using Common.Cqs.Query;
 
     public class DefaultRegistry : StructureMap.Configuration.DSL.Registry
     {

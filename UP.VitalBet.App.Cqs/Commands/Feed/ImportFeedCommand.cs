@@ -1,4 +1,5 @@
-﻿using DDD.Common.Cqs.Command;
+﻿
+using UP.VitalBet.Common.Cqs.Command;
 
 namespace UP.VitalBet.App.Cqs.Commands.Feed
 {

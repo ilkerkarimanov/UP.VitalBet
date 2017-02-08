@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UP.VitalBet.Model;
 
 namespace UP.VitalBet.Core.Import
 {

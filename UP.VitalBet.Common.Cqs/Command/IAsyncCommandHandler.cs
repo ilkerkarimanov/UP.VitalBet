@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 
-namespace DDD.Common.Cqs.Command
+namespace UP.VitalBet.Common.Cqs.Command
 {
     public interface IAsyncCommandHandler
     { }

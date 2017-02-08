@@ -5,6 +5,6 @@ namespace UP.VitalBet.Core.Import
 {
     public interface IFeedClient
     {
-        Task<FeedResult> RetrieveSportFeed();
+        Task<FeedResult> RetrieveSportsFeed();
     }
 }

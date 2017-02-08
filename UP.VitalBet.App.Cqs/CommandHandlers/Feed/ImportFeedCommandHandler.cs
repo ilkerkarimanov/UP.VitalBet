@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using DDD.Common.Cqs.Command;
 using UP.VitalBet.Common;
 using UP.VitalBet.App.Cqs.Commands.Feed;
 using UP.VitalBet.Core.Import;
+using UP.VitalBet.Common.Cqs.Command;
 
 namespace UP.VitalBet.App.Cqs.CommandHandlers.Feed
 {

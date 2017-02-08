@@ -1,9 +1,9 @@
-﻿using DDD.Common.Cqs.Query;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UP.VitalBet.App.Cqs.Queries.Matches;
 using UP.VitalBet.App.Cqs.QueryResults.Matches;
+using UP.VitalBet.Common.Cqs.Query;
 using UP.VitalBet.Core.Persistance;
 
 namespace UP.VitalBet.App.Cqs.QueryHandlers.Matches

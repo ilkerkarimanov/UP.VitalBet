@@ -45,9 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers\Feed\ImportFeedCommandHandler.cs" />
-    <Compile Include="Commands\Feed\CrawlFeedCommand.cs" />
+    <Compile Include="Commands\Feed\ImportFeedCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\Matches\MatchesByHourDurationQuery.cs" />
+    <Compile Include="Queries\Matches\MatchesForTheNext24HoursQuery.cs" />
     <Compile Include="QueryHandlers\Matches\MatchesQueryHandler.cs" />
     <Compile Include="QueryResults\Matches\MatchResult.cs" />
   </ItemGroup>

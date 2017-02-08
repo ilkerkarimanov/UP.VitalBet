@@ -1,10 +1,10 @@
-﻿using DDD.Common.Cqs.Command;
-using DDD.Common.Cqs.Query;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
 using UP.VitalBet.App.Cqs.Commands.Feed;
 using UP.VitalBet.Common;
+using UP.VitalBet.Common.Cqs.Command;
+using UP.VitalBet.Common.Cqs.Query;
 using UP.VitalBet.Controllers;
 using UP.VitalBet.Web.Hubs;
 

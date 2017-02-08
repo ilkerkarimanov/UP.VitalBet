@@ -1,10 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using UP.VitalBet.Infrastructure.EF.Mappings;
 using UP.VitalBet.Model;
 
 namespace UP.VitalBet.Infrastructure.EF
 {
-    public class VitalBetDbContext: DbContext
+    public class VitalBetDbContext : DbContext
     {
         public DbSet<Sport> Sports { get; set; }
         public DbSet<Event> Events { get; set; }
