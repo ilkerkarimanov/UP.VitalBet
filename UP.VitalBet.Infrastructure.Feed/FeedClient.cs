@@ -34,10 +34,8 @@ namespace UP.VitalBet.Infrastructure.Feed
                 var response = await httpClient.SendAsync(request);
                 using (var content = await response.Content.ReadAsStreamAsync())
                 {
-                    result.Sports = _feedSerializer.SerializeFeed(content)
-                        .Sports
-                        .Select(x => x.GetDeserializedObject())
-                        .ToList();
+                    result.Sports = _feedSerializer.SerializeFeed(content);
+                        
 
                 }
 

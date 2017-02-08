@@ -6,6 +6,6 @@ namespace UP.VitalBet.Infrastructure.Feed.Abstract
 {
     public interface IFeedSerializer
     {
-        SportsFeed SerializeFeed(Stream stream);
+        IEnumerable<Sport> SerializeFeed(Stream stream);
     }
 }
