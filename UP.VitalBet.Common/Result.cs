@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UP.VitalBet.Common
+namespace UP.VitalBet.Core
 {
     public class Result: IResult
     {

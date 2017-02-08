@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace UP.VitalBet.Common
+namespace UP.VitalBet.Core
 {
     public class Failure : Exception, IFailure
     {

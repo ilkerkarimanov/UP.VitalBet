@@ -1,5 +1,5 @@
 ﻿
-using UP.VitalBet.Common.Cqs.Command;
+using UP.VitalBet.Core.Cqs.Command;
 
 namespace UP.VitalBet.App.Cqs.Commands.Feed
 {

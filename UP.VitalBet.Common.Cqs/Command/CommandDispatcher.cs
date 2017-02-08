@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace UP.VitalBet.Common.Cqs.Command
+namespace UP.VitalBet.Core.Cqs.Command
 {
     public class CommandDispatcher : ICommandDispatcher
     {

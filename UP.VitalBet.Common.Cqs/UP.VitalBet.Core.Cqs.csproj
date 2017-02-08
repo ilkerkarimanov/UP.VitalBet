@@ -7,8 +7,8 @@
     <ProjectGuid>{0E2A2F53-39AF-46B3-8144-42B2787E9BE2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UP.VitalBet.Common.Cqs</RootNamespace>
-    <AssemblyName>UP.VitalBet.Common.Cqs</AssemblyName>
+    <RootNamespace>UP.VitalBet.Core.Cqs</RootNamespace>
+    <AssemblyName>UP.VitalBet.Core.Cqs</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

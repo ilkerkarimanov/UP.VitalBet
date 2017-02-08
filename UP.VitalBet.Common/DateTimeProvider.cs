@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UP.VitalBet.Common
+namespace UP.VitalBet.Core
 {
 
     public static class DateTimeProvider

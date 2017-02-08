@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace UP.VitalBet.Common
+namespace UP.VitalBet.Core
 {
 
     public interface IFailure

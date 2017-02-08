@@ -9,12 +9,12 @@
         var self = this;
         self.matches = ko.observableArray([]);
 
-        self.updateIntervalInMSs = 10000;
+        self.updateIntervalInMSs = 60000;
         // Reference the auto-generated proxy for the hub.
         self.feed = $.connection.broadcasterHub;
         // Create a function that the hub can call back to display messages.
         self.feed.client.matchFeed = function (matches) {
-            console.log('Matches received....');
+            console.log('Match feed received....');
             var result = [];
             $.each(matches, function (index, value) {
                 var localizedDate = moment.utc(value.StartDate).toDate();
@@ -33,7 +33,7 @@
 
         self.pullMatches = function () {
             self.feed.server.pullMatches();
-            console.log('Pull matches initiated...');
+            console.log('Match feed initiated...');
         }
     };
 

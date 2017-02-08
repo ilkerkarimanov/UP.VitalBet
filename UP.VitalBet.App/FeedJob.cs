@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Hosting;
-using UP.VitalBet.Common;
+using UP.VitalBet.Core;
 using UP.VitalBet.Core.Configuration;
 
 namespace UP.VitalBet.App
@@ -24,7 +24,7 @@ namespace UP.VitalBet.App
             _config = config;
         }
 
-        public void Execute()
+        public async void Execute()
         {
             lock (_lock)
             {
@@ -36,14 +36,14 @@ namespace UP.VitalBet.App
             }
         }
 
-        private void DoWork()
+        private async void DoWork()
         {
             if (!_config.HasProperty(feedApiConfigKey)) throw new Failure("[feedApiUrl] config is null.");
             string url = _config.ReadProperty(feedApiConfigKey);
             using (var httpClient = new HttpClient())
             {
                 var request = new HttpRequestMessage(HttpMethod.Post, url);
-                var res = Task.Run(() => httpClient.SendAsync(request)).Result;
+                var res = await httpClient.SendAsync(request);
             }
         }
 

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace UP.VitalBet.Common.Cqs.Query
+namespace UP.VitalBet.Core.Cqs.Query
 {
     public interface IQueryProcessor
     {

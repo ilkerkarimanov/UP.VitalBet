@@ -1,5 +1,5 @@
 
-namespace UP.VitalBet.Common.Cqs.Command
+namespace UP.VitalBet.Core.Cqs.Command
 {
     public interface ICommand
     {

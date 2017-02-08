@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace UP.VitalBet.Common.Cqs.Command
+namespace UP.VitalBet.Core.Cqs.Command
 {
     public interface ICommandDispatcher
     {

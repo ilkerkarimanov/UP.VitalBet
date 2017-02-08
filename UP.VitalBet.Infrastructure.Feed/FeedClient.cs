@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using UP.VitalBet.Common;
+using UP.VitalBet.Core;
 using UP.VitalBet.Core.Configuration;
 using UP.VitalBet.Core.Import;
 using UP.VitalBet.Infrastructure.Feed.Abstract;

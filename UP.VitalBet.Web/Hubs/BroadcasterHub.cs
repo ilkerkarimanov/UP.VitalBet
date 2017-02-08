@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR;
 using System.Threading.Tasks;
-using UP.VitalBet.Common;
+using UP.VitalBet.Core;
 
 namespace UP.VitalBet.Web.Hubs
 {

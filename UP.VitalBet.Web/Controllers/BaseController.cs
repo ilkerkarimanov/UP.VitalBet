@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Http;
-using UP.VitalBet.Common;
+using UP.VitalBet.Core;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -55,7 +55,7 @@ namespace UP.VitalBet.Controllers
                     .Select(error => error.ErrorMessage)
                     .ToArray();
 
-            var modelValidationResult = errors.Length == 0 ? Common.Result.Ok() : Common.Result.Fail(errors.ToArray());
+            var modelValidationResult = errors.Length == 0 ? Core.Result.Ok() : Core.Result.Fail(errors.ToArray());
 
             return modelValidationResult.Succeeded ?  OkResult() : Content (
                 System.Net.HttpStatusCode.BadRequest,

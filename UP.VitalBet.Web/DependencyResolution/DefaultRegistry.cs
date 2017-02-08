@@ -36,9 +36,9 @@ namespace UP.VitalBet.Web.DependencyResolution
     using Microsoft.AspNet.SignalR;
     using Microsoft.AspNet.SignalR.Hubs;
     using Microsoft.AspNet.SignalR.Infrastructure;
-    using Common;
-    using Common.Cqs.Command;
-    using Common.Cqs.Query;
+    using Core;
+    using Core.Cqs.Command;
+    using Core.Cqs.Query;
 
     public class DefaultRegistry : StructureMap.Configuration.DSL.Registry
     {
