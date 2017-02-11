@@ -48,6 +48,12 @@
     <Compile Include="EntityIndexers\MatchEntityIndexer.cs" />
     <Compile Include="EntityIndexers\OddEntityIndexer.cs" />
     <Compile Include="EntityIndexers\SportEntityIndexer.cs" />
+    <Compile Include="IndexHandlers\OddIndexHandler.cs" />
+    <Compile Include="IndexHandlers\BetIndexHandler.cs" />
+    <Compile Include="IndexHandlers\MatchIndexHandler.cs" />
+    <Compile Include="IndexHandlers\HandlerBase.cs" />
+    <Compile Include="IndexHandlers\EventIndexHandler.cs" />
+    <Compile Include="IndexHandlers\SportIndexHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

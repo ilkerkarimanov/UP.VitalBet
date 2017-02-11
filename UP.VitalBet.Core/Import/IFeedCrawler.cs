@@ -6,6 +6,6 @@ namespace UP.VitalBet.Core.Import
 {
     public interface IFeedCrawler
     {
-        Task<IEnumerable<Sport>> Crawl();
+        Task<FeedResult> Crawl();
     }
 }

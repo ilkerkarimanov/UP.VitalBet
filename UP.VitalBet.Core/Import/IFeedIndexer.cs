@@ -5,6 +5,6 @@ namespace UP.VitalBet.Core.Import
 {
     public interface IFeedIndexer
     {
-        void Index(IEnumerable<Sport> data);
+        void Index(FeedResult data);
     }
 }

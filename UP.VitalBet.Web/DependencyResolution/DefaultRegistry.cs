@@ -39,6 +39,8 @@ namespace UP.VitalBet.Web.DependencyResolution
     using Core;
     using Core.Cqs.Command;
     using Core.Cqs.Query;
+    using Infrastructure.Index.IndexHandlers;
+    using System.Collections.Generic;
 
     public class DefaultRegistry : StructureMap.Configuration.DSL.Registry
     {
@@ -91,7 +93,38 @@ namespace UP.VitalBet.Web.DependencyResolution
             For<IEntityIndexer<Match>>().Use<MatchEntityIndexer>();
             For<IEntityIndexer<Bet>>().Use<BetEntityIndexer>();
             For<IEntityIndexer<Odd>>().Use<OddEntityIndexer>();
-            For<IFeedIndexer>().Use<FeedIndexer>();
+
+            Scan(x =>
+            {
+                x.AssemblyContainingType<IndexHandlerBase>();
+                x.AddAllTypesOf<IndexHandlerBase>();
+            });
+
+            For<IFeedIndexer>().Use<FeedIndexer>()
+                .Ctor<IEnumerable<IndexHandlerBase>>()
+                .Is(ctx => ResolveIndexHandlers(ctx));
+        }
+
+        private IEnumerable<IndexHandlerBase> ResolveIndexHandlers(StructureMap.IContext ctx)
+        {
+            Scan(x =>
+            {
+                x.AssemblyContainingType<IndexHandlerBase>();
+                x.AddAllTypesOf<IndexHandlerBase>();
+            });
+            var sportHandler = ctx.GetInstance<SportIndexHandler>();
+            var eventHandler = ctx.GetInstance<Infrastructure.Index.IndexHandlers.EventIndexHandler>();
+            var matchHandler = ctx.GetInstance<MatchIndexHandler>();
+            var betHandler = ctx.GetInstance<BetIndexHandler>();
+            var oddHandler = ctx.GetInstance<OddIndexHandler>();
+            sportHandler
+                .SetSuccessor(eventHandler);
+            eventHandler
+                .SetSuccessor(matchHandler);
+            matchHandler
+                .SetSuccessor(betHandler);
+            betHandler.SetSuccessor(oddHandler);
+            return new List<IndexHandlerBase>() { sportHandler, eventHandler, matchHandler,betHandler,oddHandler};
         }
 
         private void RegisterFeedEngine()
