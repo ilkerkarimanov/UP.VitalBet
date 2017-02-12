@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace UP.VitalBet.Model
 {
-    public class FeedResult
+    public class Feed
     {
        public IEnumerable<Sport> Sports{get; set;}
 
-        public FeedResult()
+        public Feed()
         {
             Sports = new List<Sport>();
         }

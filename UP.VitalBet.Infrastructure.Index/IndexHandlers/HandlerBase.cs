@@ -2,15 +2,15 @@
 
 namespace UP.VitalBet.Infrastructure.Index.IndexHandlers
 {
-    public abstract class IndexHandlerBase
+    public abstract class IndexHandlerBase : IIndexHandler
     {
-        protected IndexHandlerBase successor;
+        protected IIndexHandler successor;
 
-        public void SetSuccessor(IndexHandlerBase successor)
+        public void SetSuccessor(IIndexHandler successor)
         {
             this.successor = successor;
         }
 
-        public abstract void IndexRequest(FeedResult feed);
+        public abstract void IndexRequest(Feed feed);
     }
 }

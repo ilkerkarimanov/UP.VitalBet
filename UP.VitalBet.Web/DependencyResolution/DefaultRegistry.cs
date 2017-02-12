@@ -101,22 +101,26 @@ namespace UP.VitalBet.Web.DependencyResolution
             });
 
             For<IFeedIndexer>().Use<FeedIndexer>()
-                .Ctor<IEnumerable<IndexHandlerBase>>()
+                .Ctor<IFeedIndexHandler>()
                 .Is(ctx => ResolveIndexHandlers(ctx));
         }
 
-        private IEnumerable<IndexHandlerBase> ResolveIndexHandlers(StructureMap.IContext ctx)
+        private IFeedIndexHandler ResolveIndexHandlers(StructureMap.IContext ctx)
         {
             Scan(x =>
             {
                 x.AssemblyContainingType<IndexHandlerBase>();
-                x.AddAllTypesOf<IndexHandlerBase>();
+                x.AddAllTypesOf<IIndexHandler>();
+                x.AddAllTypesOf<IFeedIndexHandler>();
             });
+            var feedHandler = ctx.GetInstance<FeedIndexHandler>();
             var sportHandler = ctx.GetInstance<SportIndexHandler>();
-            var eventHandler = ctx.GetInstance<Infrastructure.Index.IndexHandlers.EventIndexHandler>();
+            var eventHandler = ctx.GetInstance<EventIndexHandler>();
             var matchHandler = ctx.GetInstance<MatchIndexHandler>();
             var betHandler = ctx.GetInstance<BetIndexHandler>();
             var oddHandler = ctx.GetInstance<OddIndexHandler>();
+            feedHandler
+                .SetSuccessor(sportHandler);
             sportHandler
                 .SetSuccessor(eventHandler);
             eventHandler
@@ -124,7 +128,7 @@ namespace UP.VitalBet.Web.DependencyResolution
             matchHandler
                 .SetSuccessor(betHandler);
             betHandler.SetSuccessor(oddHandler);
-            return new List<IndexHandlerBase>() { sportHandler, eventHandler, matchHandler,betHandler,oddHandler};
+            return feedHandler;
         }
 
         private void RegisterFeedEngine()

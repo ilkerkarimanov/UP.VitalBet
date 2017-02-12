@@ -9,19 +9,16 @@ namespace UP.VitalBet.Infrastructure.Index
 {
     public class FeedIndexer : IFeedIndexer
     {
-        private readonly IEnumerable<IndexHandlerBase> _handlers;
+        private readonly IFeedIndexHandler _feedHandler;
 
-        public FeedIndexer(IEnumerable<IndexHandlerBase> handlers)
+        public FeedIndexer(IFeedIndexHandler feedHandler)
         {
-            _handlers = handlers;
+            _feedHandler = feedHandler;
         }
 
-        public void Index(FeedResult data)
+        public void Index(Feed data)
         {
-            foreach(var handler in _handlers)
-            {
-                handler.IndexRequest(data);
-            }
+            _feedHandler.IndexRequest(data);
         }
     }
 }

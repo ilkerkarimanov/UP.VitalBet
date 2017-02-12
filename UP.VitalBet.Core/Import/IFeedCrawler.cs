@@ -6,6 +6,6 @@ namespace UP.VitalBet.Core.Import
 {
     public interface IFeedCrawler
     {
-        Task<FeedResult> Crawl();
+        Task<Feed> Crawl();
     }
 }

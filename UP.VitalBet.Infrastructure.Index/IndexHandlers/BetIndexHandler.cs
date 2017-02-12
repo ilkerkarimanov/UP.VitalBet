@@ -15,7 +15,7 @@ namespace UP.VitalBet.Infrastructure.Index.IndexHandlers
         {
             _betIndexer = betIndexer;
         }
-        public override void IndexRequest(FeedResult feed)
+        public override void IndexRequest(Feed feed)
         {
             _betIndexer.Index(feed.Sports.
             SelectMany(x => x.Events)

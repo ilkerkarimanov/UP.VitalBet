@@ -21,13 +21,13 @@ namespace UP.VitalBet.Infrastructure.Feed
             _feedSerializer = feedSerializer;
             _config = config;
         }
-        public async Task<FeedResult> RetrieveSportsFeed()
+        public async Task<Model.Feed> RetrieveSportsFeed()
         {
             var stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
             if (!_config.HasProperty(feedClientConfigKey)) throw new Failure("[feedClientUrl] config is null.");
             string url = _config.ReadProperty(feedClientConfigKey);
-            FeedResult result = new FeedResult();
+            Model.Feed result = new Model.Feed();
             using (var httpClient = new HttpClient())
             {
                 var request = new HttpRequestMessage(HttpMethod.Get, url);

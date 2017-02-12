@@ -13,7 +13,7 @@ namespace UP.VitalBet.Infrastructure.Index.IndexHandlers
         {
             _sportIndexer = sportIndexer;
         }
-        public override void IndexRequest(FeedResult feed)
+        public override void IndexRequest(Feed feed)
         {
             _sportIndexer.Index(feed.Sports);
             if (successor != null) successor.IndexRequest(feed);
