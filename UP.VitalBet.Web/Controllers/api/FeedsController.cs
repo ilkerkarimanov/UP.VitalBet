@@ -34,7 +34,7 @@ namespace UP.VitalBet.Web.Controllers.api
             {
                 var command = new ImportFeedCommand();
                 var result = await _commandDispatcher.DispatchAsync<ImportFeedCommand, Result>(command);
-                return OkResult(result);
+                return ToResult(result);
             }
             catch (Failure reqEx)
             {

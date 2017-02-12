@@ -30,8 +30,8 @@ namespace UP.VitalBet.Web.Hubs
         public async Task<Result> PullMatches(DateTime startDate)
         {
             var query = new MatchesForTheNext24HoursQuery() { StartDate = startDate };
-            var result = await _queryProcessor.ProcessAsync<IEnumerable<MatchResult>>(query);
-            await MatchFeed(result);
+            var result = await _queryProcessor.ProcessAsync(query);
+            await MatchFeed(result.Value);
             return await Task.FromResult(Result.Ok());
         }
     }

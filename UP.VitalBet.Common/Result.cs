@@ -55,12 +55,12 @@ namespace UP.VitalBet.Core
             return new Result(new string[1] { error });
         }
 
-        public static Result Fail<T> (T value, string error)
+        public static Result<T> Fail<T> (T value, string error)
         {
             return new Result<T>(value, error);
         }
 
-        public static Result Ok<T>(T value)
+        public static Result<T> Ok<T>(T value)
         {
             return new Result<T>(value);
         }
