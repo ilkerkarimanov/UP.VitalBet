@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Bet.cs" />
     <Compile Include="Event.cs" />
-    <Compile Include="FeedResult.cs" />
+    <Compile Include="Feed.cs" />
     <Compile Include="IEntityBase.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Odd.cs" />

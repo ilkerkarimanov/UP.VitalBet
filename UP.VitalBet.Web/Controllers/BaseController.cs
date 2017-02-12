@@ -79,6 +79,18 @@ namespace UP.VitalBet.Controllers
                 });
         }
 
+        protected virtual IHttpActionResult ToResult<T>(Result<T> result)
+        {
+            return result.Succeeded ? OkResult(result.Value) : Content(
+                System.Net.HttpStatusCode.BadRequest,
+                new
+                {
+                    Status = "Failed",
+                    Error = "request_error",
+                    Message = result.Errors
+                });
+        }
+
         protected virtual IHttpActionResult OkResult()
         {
             return Ok(
